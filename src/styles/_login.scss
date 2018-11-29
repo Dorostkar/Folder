@@ -1,0 +1,32 @@
+.login {
+  @include xy-grid();
+  @include flex-align(center, middle);
+  background-image: linear-gradient(#a62cd8, #3c51bc);
+  height: 100vh;
+  width: 100vw;
+
+}
+.login_card {
+  @include xy-grid(10);
+  @include flex-align(center, middle);
+  background-color: white;
+  border-radius: rem-calc(20);
+  @include breakpoint(medium){
+    @include xy-grid();
+  }
+  &--logo {
+    @include xy-cell(7);
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+    
+  }
+  &--login {
+    @include xy-cell(7);
+    margin-top: rem-calc(20);
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+  }
+ 
+}
