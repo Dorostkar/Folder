@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import App from "./components/App";
-
+import { BrowserRouter as Router} from "react-router-dom";
+import Root from './routers/Root'
+import configureStore from "./store/configureStore.dev";
 import "./styles/main.scss";
 
+const store = configureStore();
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Router>
+    <Root store={store}/>
+  </Router>,
   document.getElementById("app")
 );
 module.hot.accept();

@@ -1,22 +1,24 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Login from "./login/Login";
-const Home = () => (
-  <h1>
-    <Link to="/login">Click Me</Link>
-  </h1>
-);
-
+import { withRouter,Link } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/login" component={Login} />
-        <Route component={() => <p>404</p>} />
-      </Switch>
+
+      <div>
+        <Link to="/login">Login</Link>
+        
+        <br/>
+        <Link to="/dashboard/home">dashboard1</Link>
+        <br/>
+        <Link to="/dashboard/tax">dashboard2</Link>
+        <br/>
+        <Link to="/dashboard">dashboard</Link>
+
+      {this.props.children}
+     
+    </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

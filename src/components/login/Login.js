@@ -21,6 +21,11 @@ class Login extends Component {
 		let password = event.target.value;
 		this.setState({ password });
 	};
+	handleSubmit = (event) => {
+		event.preventDefault();
+		alert('A username was submitted: ' + this.state.username);
+	  }
+	
 	render() {
 		return (
 			<div className="container">
@@ -30,7 +35,7 @@ class Login extends Component {
 							<img src={require("../../assets/images/small/coffee.jpg")} />
 						</div>
 						<div className="login_card--login">
-							<form>
+							<form onSubmit={this.handleSubmit}>
 								<div className="input-group">
 									<span className="input-group-label">U</span>
 									<input

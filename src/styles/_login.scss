@@ -1,9 +1,10 @@
 .login {
   @include xy-grid();
+  @include flex-align-self(stretch);
   @include flex-align(center, middle);
   background-image: linear-gradient(#a62cd8, #3c51bc);
-  height: 100vh;
-  width: 100vw;
+   height: 100vh;
+  // width: 100vw;
 
 }
 .login_card {
@@ -13,6 +14,7 @@
   border-radius: rem-calc(20);
   @include breakpoint(medium){
     @include xy-grid();
+    min-height: 80vh;
   }
   &--logo {
     @include xy-cell(7);
