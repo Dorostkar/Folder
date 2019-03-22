@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { withRouter,Link } from 'react-router-dom'
+import '../styles/main.scss'
 class App extends Component {
   render() {
     return (
 
-      <div>
+      <div id="menu">
         <Link to="/login">Login</Link>
-        
         <br/>
-        <Link to="/dashboard/home">dashboard1</Link>
+        <Link to="/forgetPassword">Forget Password</Link>
         <br/>
-        <Link to="/dashboard/tax">dashboard2</Link>
         <br/>
         <Link to="/dashboard">dashboard</Link>
 
